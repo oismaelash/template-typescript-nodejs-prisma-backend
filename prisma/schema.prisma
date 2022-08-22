@@ -5,7 +5,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://admin:password@pipelines-db.cxtim8fuqra6.us-east-1.rds.amazonaws.com:3306/ts-nodejs-prisma"
+  url      = env("DATABASE_URL")
 }
 
 model post {
