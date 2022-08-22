@@ -9,7 +9,9 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
     "test": "jest",
     "prisma:introspect": "prisma introspect",
-    "prisma:generate": "prisma generate"
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma": "prisma"
   },
   "dependencies": {
     "express": "^4.17.1",

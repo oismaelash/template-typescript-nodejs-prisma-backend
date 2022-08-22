@@ -4,17 +4,16 @@ generator client {
 }
 
 datasource db {
-  provider = "mongodb"
-  url      = "mongodb+srv://ismaelash:0123456789@cluster0.n90mhx8.mongodb.net/manda-ai-online?retryWrites=true&w=majority"
+  provider = "mysql"
+  url      = "mysql://admin:password@pipelines-db.cxtim8fuqra6.us-east-1.rds.amazonaws.com:3306/ts-nodejs-prisma"
 }
 
 model post {
-  id               String   @id @default(auto()) @map("_id") @db.ObjectId
+  id               String   @id
   title            String
   body             String
   isSchedule       Boolean
   datetimeSchedule String
   createdAt        DateTime @default(now())
-
-  @@map("contents")
+  test             String
 }
