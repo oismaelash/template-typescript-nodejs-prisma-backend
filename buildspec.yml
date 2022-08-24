@@ -7,6 +7,8 @@ phases:
       - npm install
   build:
     commands:
+      - echo Apply migrations...
+      - prisma migrate deploy
       - echo Create build...
       - npm run build
   post_build:
